@@ -1,0 +1,20 @@
+AppBundle\Entity\Board:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\BoardRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nombre:
+            type: string
+            length: 30
+        total:
+            type: integer
+        tipo:
+            type: string
+            length: 30
+    lifecycleCallbacks: {  }
