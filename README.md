@@ -8,4 +8,6 @@ La finalidad de esta aplicacion es llevar el conteo de cuanto debe cada miembro 
  
  [DEMO](http://chelapp.reynol.io)
  
+ Posdata: No me vayan a chacalear el logo que me quedo bien chido.
+ 
 A Symfony project created on May 18, 2016, 1:49 am.
