@@ -1,4 +1,7 @@
-chelapp
+![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png) chelapp
+![alt tag](https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png) 
+![alt tag](https://raw.githubusercontent.com/username/projectname/branch/path/to/img.png) 
+https://github.com/reynol/chelapp/blob/master/web/img/chelapp.png
 ======
 Esta aplicacion la cree por diversion en un dia de ocio, esta hecha en PHP/Symfony/Doctrine/AngularJS. 
 
