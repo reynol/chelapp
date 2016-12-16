@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png" height="26">chelaap
+<img src="https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png" height="36">chelaap
 ======
 Esta aplicacion la cree por diversion en un dia de ocio, esta hecha en PHP/Symfony/Doctrine/AngularJS. 
 
