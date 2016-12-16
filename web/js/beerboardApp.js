@@ -2,22 +2,17 @@
     var app = angular.module('beerBoard', []);
 
     app.controller('BeerBoardController', function($scope, $http) {
-        console.log("hello");
         var data = this;
         data.info=[];
         $http.get("/test/get")
             .then(function(response) {
                 data.info = response.data;
-                console.log(data.info);
-
             });
 
         $scope.Math = window.Math;
 
 
         $scope.getMod = function(value, mod) {
-            //console.log("mod: "+mod);
-            //console.log("value: "+value);
             return value % mod ;
         };
 
@@ -25,14 +20,11 @@
 
         $scope.add = function(member) {
 
-            console.log(">>>>" + member.id);
-            console.log("<<<<" + member.total);
-
             member.total+=1;
+            //Used to put the corresponding number on the images
+            //lets say instead of put 100 for the truck it puts a number 1.
+            // 100 % 100 =1 % 50 =1 % 30 =1 % 20 = 1 
             member.total_flag=(((member.total%100 )%50)%30)%20;
-
-            console.log("RESULT " + member.total);
-            console.log("ADO " + member.total_flag);
 
             $http.get("/test/add/"+member.id+"/"+member.total)
                 .then(function(response) {
@@ -41,15 +33,6 @@
                 });
         };
 
-
-     /*   $scope.add = function(member) {
-
-
-            console.log("iuju" + member.id);
-
-
-        };
-*/
     });
 
 })();

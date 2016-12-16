@@ -2,7 +2,9 @@
 
 {% block title %} BeerBoard{% endblock %}
 {% block stylesheets %}
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"
+          xmlns="http://www.w3.org/1999/html">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
 {% endblock %}
 {% block body %}
@@ -31,11 +33,11 @@
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <span class="caret"></span></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Acerca de</a></li>
-                                <li><a href="#">Help text</a></li>
-                                <li><a href="#">Export</a></li>
+                                <li><a data-toggle="modal" data-target="#myModal1" href="#">Acerca de</a></li>
+                                <li><a data-toggle="modal" data-target="#myModal2" href="#">Help text</a></li>
+                                <li><a data-toggle="modal" data-target=".bs-example-modal-sm" href="#">Export</a></li>
                                 <li role="separator" class="divider"></li>
-                                <li><a href="#">History</a></li>
+                                <li><a data-toggle="modal" data-target=".bs-example-modal-sm" href="#">History</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -65,7 +67,7 @@
                                     <div class="media">
                                         <div class="media-left">
                                             <a href="#">
-                                                <img class="media-object icon" src="/img/{{ '{{' }} member.nombre {{ '}}' }}.jpeg" >
+                                                <img class="media-object icon" ng-src="/img/{{ '{{' }} member.nombre {{ '}}' }}.jpeg" >
                                             </a>
                                         </div>
                                     </div>
@@ -165,10 +167,183 @@
         </div>
     </div>
 
+    <!-- Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Chelapp 1.0</h4>
+                </div>
+                <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-sm-8 vertical-align">
+                                <div class="member-name">
+                                    <span class="mediabody"> Su finalidad es llevar el conteo de chelas </span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Help Text</h4>
+                </div>
+                <div class="modal-body">
+
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/0.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> No hay adeudo </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/1-19.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> 1 cheve </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/20.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> 20 cheves = un carton </h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/30.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> 30 cheves = una botella </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/50.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> 50 cheves = un barril </h4>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-sm-2 vertical-align">
+
+                            <div class="media">
+                                <div class="media-left">
+                                    <a href="#">
+                                        <img class="media-object icon" src="/img/100.png" >
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-5 vertical-align">
+                            <div class="member-name">
+                                <h4 class="mediabody"> 100 cheves, envien el camion </h4>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+
+                No implementada, pendiente para R10,
+                </br>
+                // TODO agregar un togle
+            </div>
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="container">
-            <p class="text-muted"><span class="text-nowrap">&copy; 2016 Reynol</span>
-                <span class="text-nowrap">Todos los derechos reservados.</span></p>
+            <p class="text-muted">
+                <a href="http://reynol.io">
+                    <span class="text-nowrap">&copy;<span id="footer-year"></span> Reynol</span>
+                    <span class="text-nowrap">Todos los derechos reservados.</span>
+                </a>  
+            </p>
+              
         </div>
     </footer>
 {% endblock %}
@@ -180,6 +355,11 @@
 
 
     <script src="{{ asset('js/beerboardApp.js') }}"></script>
-
+<script>
+     $( document ).ready(function() {
+        
+        $("#footer-year").html(new Date().getFullYear());
+    });
+</script>
 
 {% endblock %}
