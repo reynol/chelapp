@@ -16,36 +16,16 @@ use AppBundle\Service as Service;
 use AppBundle\Entity as Entity;
 
 
-class Test extends Controller
+class BoardController extends Controller
 {
     /**
-     * @Route("/test/number")
+     * @Route("/")
      */
     public function numberAction()
     {
-        $number = rand(0, 100);
-
-        $product = new Entity\Board();
-        $product->setNombre('Keyboard');
-        $product->setTotal(1);
-        $product->setTipo('Ergonomic and stylish!');
-
-        $em = $this->getDoctrine()->getManager();
-
-        // tells Doctrine you want to (eventually) save the Product (no queries yet)
-//        $em->persist($product);
-
-        // actually executes the queries (i.e. the INSERT query)
-  //      $em->flush();
-
-
-        $product = $this->getDoctrine()
-            ->getRepository('AppBundle:Board')
-            ->findAll();
-
 
         return $this->render('board/beerboard.html.twig', array(
-            'row_count' => $product[0]->getId(),
+            'row_count' => 0,
         ));
     }
 
@@ -60,7 +40,6 @@ class Test extends Controller
 
         $response = new Response(json_encode($product, true));
         $response->headers->set('Content-Type', 'application/json');
-
         return $response;
 
     }
