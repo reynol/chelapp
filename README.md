@@ -4,7 +4,7 @@ Esta aplicacion la cree por diversion, en un dia de ocio, esta hecha en PHP/Symf
 
 La finalidad de esta aplicacion es llevar el conteo de cuanto debe cada miembro del equipo. 
 
-[DEMO](http://chelapp.reynol.io)
+[DEMO](http://chelapp.reynol.io){:target="_blank"}
 
 
 
