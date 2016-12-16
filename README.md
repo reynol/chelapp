@@ -1,10 +1,11 @@
 <img src="https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png" height="36">chelaap
 ======
-Esta aplicacion la cree por diversion en un dia de ocio, esta hecha en PHP/Symfony/Doctrine/AngularJS. 
+Esta aplicación la cree por diversión en un día de ocio, esta hecha en PHP/Symfony/Doctrine/AngularJS/MySQL.
 
-En el trabajo comunmente cuando algun miembro del equipo comete algun error o crea algun programa con defectos, como castigo debe regalar al equipo una cerveza, carton, botella o un barril,  dependiendo de la gravedad de su falta.
- 
-La finalidad de esta aplicacion es llevar el conteo de cuanto debe cada miembro del equipo. 
+En el trabajo comúnmente cuando un miembro del equipo comete algún error o crea algún programa con defectos, como castigo debe regalar al equipo una cerveza, cartón, botella o un barril, dependiendo de la gravedad de su falta.
+
+La finalidad de esta aplicación es llevar el conteo de cuanto debe cada miembro del equipo.
+
  
  [DEMO](http://chelapp.reynol.io)
  
