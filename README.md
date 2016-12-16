@@ -1,5 +1,5 @@
 
-![alt tag](https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png) 
+![alt tag](https://raw.githubusercontent.com/reynol/chelapp/master/web/img/chelapp.png | width=48) 
 chelaap
 ======
 Esta aplicacion la cree por diversion en un dia de ocio, esta hecha en PHP/Symfony/Doctrine/AngularJS. 
